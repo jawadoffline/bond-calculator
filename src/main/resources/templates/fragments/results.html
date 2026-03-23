@@ -1,22 +1,22 @@
 <div class="space-y-6">
 
     <!-- Key Metrics -->
-    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
-        <div class="p-4 rounded-xl bg-gray-900/30 border border-gray-800/50">
-            <p class="text-xs text-gray-500 font-mono mb-1">CLEAN PRICE</p>
-            <p class="text-xl font-bold text-white font-mono" th:text="'$' + ${result.cleanPrice}"></p>
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+        <div class="p-3 rounded-xl bg-gray-900/30 border border-gray-800/50 overflow-hidden">
+            <p class="text-[10px] text-gray-500 font-mono mb-1">CLEAN PRICE</p>
+            <p class="text-sm sm:text-base font-bold text-white font-mono truncate" th:text="'$' + ${result.cleanPrice}"></p>
         </div>
-        <div class="p-4 rounded-xl bg-gray-900/30 border border-gray-800/50">
-            <p class="text-xs text-gray-500 font-mono mb-1">DIRTY PRICE</p>
-            <p class="text-xl font-bold text-white font-mono" th:text="'$' + ${result.dirtyPrice}"></p>
+        <div class="p-3 rounded-xl bg-gray-900/30 border border-gray-800/50 overflow-hidden">
+            <p class="text-[10px] text-gray-500 font-mono mb-1">DIRTY PRICE</p>
+            <p class="text-sm sm:text-base font-bold text-white font-mono truncate" th:text="'$' + ${result.dirtyPrice}"></p>
         </div>
-        <div class="p-4 rounded-xl bg-gray-900/30 border border-gray-800/50">
-            <p class="text-xs text-gray-500 font-mono mb-1">ACCRUED INT</p>
-            <p class="text-xl font-bold text-emerald-400 font-mono" th:text="'$' + ${result.accruedInterest}"></p>
+        <div class="p-3 rounded-xl bg-gray-900/30 border border-gray-800/50 overflow-hidden">
+            <p class="text-[10px] text-gray-500 font-mono mb-1">ACCRUED INT</p>
+            <p class="text-sm sm:text-base font-bold text-emerald-400 font-mono truncate" th:text="'$' + ${result.accruedInterest}"></p>
         </div>
-        <div class="p-4 rounded-xl bg-gray-900/30 border border-gray-800/50">
-            <p class="text-xs text-gray-500 font-mono mb-1">CURRENT YIELD</p>
-            <p class="text-xl font-bold text-white font-mono" th:text="${result.currentYield} + '%'"></p>
+        <div class="p-3 rounded-xl bg-gray-900/30 border border-gray-800/50 overflow-hidden">
+            <p class="text-[10px] text-gray-500 font-mono mb-1">CURRENT YIELD</p>
+            <p class="text-sm sm:text-base font-bold text-white font-mono truncate" th:text="${result.currentYield} + '%'"></p>
         </div>
     </div>
 
@@ -26,22 +26,22 @@
             <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
             <p class="font-mono text-xs text-emerald-400 tracking-wider">RISK ANALYTICS</p>
         </div>
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-6">
-            <div>
-                <p class="text-xs text-gray-500 font-mono mb-1">MACAULAY DUR</p>
-                <p class="text-lg font-bold text-white font-mono" th:text="${result.macaulayDuration} + ' yr'"></p>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+            <div class="overflow-hidden">
+                <p class="text-[10px] text-gray-500 font-mono mb-1">MACAULAY DUR</p>
+                <p class="text-sm sm:text-base font-bold text-white font-mono truncate" th:text="${result.macaulayDuration} + ' yr'"></p>
+            </div>
+            <div class="overflow-hidden">
+                <p class="text-[10px] text-gray-500 font-mono mb-1">MODIFIED DUR</p>
+                <p class="text-sm sm:text-base font-bold text-white font-mono truncate" th:text="${result.modifiedDuration}"></p>
+            </div>
+            <div class="overflow-hidden">
+                <p class="text-[10px] text-gray-500 font-mono mb-1">DV01</p>
+                <p class="text-sm sm:text-base font-bold text-emerald-400 font-mono truncate" th:text="'$' + ${result.dv01}"></p>
             </div>
             <div>
-                <p class="text-xs text-gray-500 font-mono mb-1">MODIFIED DUR</p>
-                <p class="text-lg font-bold text-white font-mono" th:text="${result.modifiedDuration}"></p>
-            </div>
-            <div>
-                <p class="text-xs text-gray-500 font-mono mb-1">DV01</p>
-                <p class="text-lg font-bold text-emerald-400 font-mono" th:text="'$' + ${result.dv01}"></p>
-            </div>
-            <div>
-                <p class="text-xs text-gray-500 font-mono mb-1">CONVEXITY</p>
-                <p class="text-lg font-bold text-white font-mono" th:text="${result.convexity}"></p>
+                <p class="text-[10px] text-gray-500 font-mono mb-1">CONVEXITY</p>
+                <p class="text-sm sm:text-base font-bold text-white font-mono truncate" th:text="${result.convexity}"></p>
             </div>
         </div>
     </div>
